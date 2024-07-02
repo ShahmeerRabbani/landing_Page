@@ -1,0 +1,29 @@
+.card{
+    height: 290px;
+    width: 260px;
+    position: relative;
+    background-color: antiquewhite;
+    display: flex;
+}
+
+.caption{
+    position: absolute;
+    height: 100px;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+}
+
+.anchor{
+    color: white;
+    text-decoration: none;
+    z-index: 99;
+    font-size: 14px;
+}
+
+.anchor:nth-child(1){
+    font-size: 22px;
+}

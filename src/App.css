@@ -1,0 +1,96 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Main_Container{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family:  Source Sans Pro ,Arial, Helvetica, sans-serif;
+}
+
+.top_blue{
+  height: 35px;
+  width: 100%;
+  background-color: #00306E;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider_container{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+}
+
+.Academics{
+  height: 100vh;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.card_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.Third_div{
+  display: flex;
+  padding: 0 100px;
+  min-height: 120vh;
+  width: 100%;
+  background-color: aqua;
+}
+
+.image_display{
+  position: relative;
+  height: 100%;
+  max-width: 50%;
+  display: flex;
+}
+
+.about{
+  padding-top: 50px;
+  padding-left: 70px;
+  height: 100%;
+  max-width: 50%;
+
+}
+
+.read_button{
+  border: 2px solid #f4f5f5;
+  padding: 14px 36px;
+  border-radius: 5px;
+  color: #00306E;
+  transition: 0.5s ease;
+  display: flex;
+}
+
+.read_button:hover{
+  background-color: #D2093C;
+  color: white;
+  border: none;
+}
+
+.moving_img{
+  position: absolute;
+  left:60%;
+  top: 20%;
+  animation: moving 6s alternate infinite;
+}
+
+@keyframes moving {
+  0%{
+    top: 20%;
+  }
+  100%{
+    top: 50%;
+  }
+}
