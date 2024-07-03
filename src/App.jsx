@@ -151,6 +151,7 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="Campus_life"></div>
       </div>
     </>
   );
