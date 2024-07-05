@@ -64,7 +64,7 @@
 }
 
 .read_button{
-  border: 2px solid #f4f5f5;
+  border: 2px solid rgba(0, 48, 110, .1);;
   padding: 14px 36px;
   border-radius: 5px;
   color: #00306E;
@@ -95,7 +95,104 @@
 }
 
 .Campus_life{
-  height: 130vh;
+  height: 160vh;
   width: 100%;
   background-color: #f5f5f5;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
+
+.Campus_life_content{
+  display: flex;
+  height: 75%;
+  width: 100%;
+  padding: 0 120px;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.Campus_content{
+  height: 550px;
+  width: 55%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.element_parent{
+  display: flex;
+  height: 20%;
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.content_element_text{
+  flex: 7;
+  display: flex;
+}
+
+.content_icon{
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.content_text{
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.arrow_element{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle_arrow{
+  height: 45px;
+  width: 45px;
+  border-radius: 100px;
+  border: 2px solid #f4f5f5;
+  cursor: pointer;
+  transition: ease 0.5s ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle_arrow:hover{
+  background-color: #00306E;
+  border-color:#00306E;
+}
+
+.Campus_image{
+  height: 520px;
+  width: 43%;
+  background-image: url('./assets/4.ff3894830e71cdd1965f.png');
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Campus_image::after{
+  content: '';
+  position: absolute;
+  background-image: url('./assets/image.png');
+  z-index: 99;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  top: 65%;
+  left: 75%;
+}
+

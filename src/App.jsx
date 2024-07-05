@@ -7,8 +7,39 @@ import {
 import "./App.css";
 import Header from "./Header/Header";
 import Card from "./card/Card";
+import ArrowIcon from './assets/vector.svg'
+import Vector8 from './assets/vector8.svg'
+import Vector9 from './assets/vector9.svg'
+import Vector10 from './assets/vector10.svg'
+import Button from "./button/Button";
+
 
 function App() {
+
+  const CampusData = [
+    {
+      id: 1,
+      icon: Vector8,
+      UpperTitle: 'Do More, Stress Less',
+      lowerTitle: 'Why I say old chap that is spiffing he legged it in my flat easy pease.',
+      arrowIcon: ArrowIcon,
+    },
+    {
+      id: 2,
+      icon: Vector9,
+      UpperTitle: 'Do More, Stress Less',
+      lowerTitle: 'Why I say old chap that is spiffing he legged it in my flat easy pease.',
+      arrowIcon: ArrowIcon,
+    },
+    {
+      id: 3,
+      icon: Vector10,
+      UpperTitle: 'Do More, Stress Less',
+      lowerTitle: 'Why I say old chap that is spiffing he legged it in my flat easy pease.',
+      arrowIcon: ArrowIcon,
+    },
+  ]
+
   return (
     <>
       <div className="Main_Container">
@@ -98,7 +129,10 @@ function App() {
             <img
               src="../src\assets\ab.fcda2469b98ffc37a148.png"
               alt=""
-             style={{height: '-webkit-fill-available', width: '-webkit-fill-available'}}
+              style={{
+                height: "-webkit-fill-available",
+                width: "-webkit-fill-available",
+              }}
             />
             <img
               className="moving_img"
@@ -137,21 +171,82 @@ function App() {
               <br /> education <br />
               is the integral development of a person.
             </p>
-            <div style={{ width: "100%", display: 'flex', alignItems: 'center', gap: 20, marginBottom: 100 }}>
-              <a href="#" className="read_button">
-                Read more <img src="../src/assets/vector.svg" alt="" />
-              </a>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                gap: 20,
+                marginBottom: 100,
+              }}
+            >
+              <Button title='Read more'/>
 
               <img src="../src/assets/sms.png" alt="" />
               <p>
-              <span>Get Support</span>
-              <br />
-              <span>support@react.com</span>
+                <span>Get Support</span>
+                <br />
+                <span
+                  style={{ fontSize: 18, color: "#00306E", fontWeight: 700 }}
+                >
+                  support@react.com
+                </span>
               </p>
             </div>
           </div>
         </div>
-        <div className="Campus_life"></div>
+        <div className="Campus_life">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              lineHeight: 1,
+            }}
+          >
+            <span style={{ fontSize: 48, fontWeight: 700, color: "#00306E" }}>
+              Campus life
+            </span>
+            <span>
+              <img src="../src/assets/underLine.png" alt="" />
+            </span>
+          </div>
+          <div className="Campus_life_content">
+            <div className="Campus_content">
+              {CampusData.map((item, id)=>{
+                return(
+                  
+                    <div className="element_parent" key={id}>
+                <div className="content_element_text">
+                  <div className="content_icon">
+                    <img src={item.icon} alt="" height={40} width={40}/>
+                  </div>
+                  <div className="content_text">
+                    <span style={{fontSize: 20, fontWeight: 700, color:'#00306E'}}>
+                    {item.UpperTitle}
+                    </span>
+                    <span style={{ color:'#383736', width: '85%', textAlign:"left"}}>
+                   {item.lowerTitle}
+                    </span>
+                  </div>
+                </div>
+                <div className="arrow_element">
+                  <div className="circle_arrow">
+                    <img src={item.arrowIcon} alt="" />
+                  </div>
+                </div>
+              </div>
+                  
+                )
+              })}
+            </div>
+            <div className="Campus_image"></div>
+          </div>
+        <div style={{height: '40px', width: '100%', display:'flex', justifyContent: 'center', alignItems: 'center', marginTop: 30}}> 
+           <Button title='More about Campus life'/>
+           </div>
+        </div>
       </div>
     </>
   );
